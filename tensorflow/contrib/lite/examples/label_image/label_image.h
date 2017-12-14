@@ -22,7 +22,7 @@ using std::string;
 
 struct Settings {
   bool verbose = false;
-  bool accel = true;
+  bool accel = false;
   bool input_floating = false;
   bool profiling = false;
   int loop_count = 1;
