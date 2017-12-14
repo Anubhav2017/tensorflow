@@ -24,6 +24,7 @@ struct Settings {
   bool verbose = false;
   bool accel = true;
   bool input_floating = false;
+  bool profiling = false;
   int loop_count = 1;
   float input_mean = 127.5f;
   float input_std = 127.5f;
