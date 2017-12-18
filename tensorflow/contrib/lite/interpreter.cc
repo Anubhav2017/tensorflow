@@ -403,7 +403,6 @@ TfLiteStatus Interpreter::Invoke() {
     }
   }
 
-  double all_time = 0;
   for (int i = 0; i < nodes_and_registration_.size(); i++) {
     // Ensure we have allocated up to this node. The point of this is to
     // allocate as much as possible before running any evaluation, but
@@ -423,6 +422,7 @@ TfLiteStatus Interpreter::Invoke() {
   }
 
   if (profiling_) {
+    double all_time = 0;
     for (int i = 0; i < nodes_and_registration_.size(); i++) {
       TfLiteNode& node = nodes_and_registration_[i].first;
       const TfLiteRegistration& registration = nodes_and_registration_[i].second;
